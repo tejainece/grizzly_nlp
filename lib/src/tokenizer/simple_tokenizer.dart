@@ -34,9 +34,13 @@ List<String> lineTokenize(String text, {bool keepBlankLines: true}) =>
     new LineTokenizer(keepBlankLines: keepBlankLines).tokenize(text);
 
 class WhitespaceTokenizer implements Tokenizer {
+  const WhitespaceTokenizer();
+
   List<String> tokenize(String text) => text.split(new RegExp(r'\s+'));
 }
 
-class PunctuationTokenizer implements Tokenizer {
+class WordPunctuationTokenizer implements Tokenizer {
+  const WordPunctuationTokenizer();
+
   List<String> tokenize(String text) => text.split(new RegExp(r'(\s+|[^\d\w]+)+'));
 }
