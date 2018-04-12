@@ -10,5 +10,7 @@ environment:
 dependencies:
   grizzly_array:
     path: ../grizzly_array
+  grizzly_series:
+    path: ../grizzly_series
   grizzly_primitives:
     path: ../grizzly_primitives
